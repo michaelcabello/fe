@@ -37,7 +37,7 @@ class SaleCreate extends Component
 
     public function mount()
     {
-        
+
         $this->cart = session('cart', new Collection());
         // establece la propiedad $cart en el contenido de la sesión con la clave 'cart' si existe,
         //y si no existe (por ejemplo, en la primera carga de la página), crea una nueva colección vacía y la asigna a la propiedad $cart.

@@ -11,9 +11,6 @@ class CategoryController extends Controller
     public function index()
     {
 
-
-    
-
      $categories = Category::whereNull('category_id')
         ->with('childrenCategories')
         ->paginate(5);

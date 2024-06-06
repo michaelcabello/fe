@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table->string('name');
             $table->string('slug');
-          //$table->unsignedBigInteger('category_id')->nullable(); //activo para el recursivo
+            $table->unsignedBigInteger('category_id')->nullable(); //activo para el recursivo
             $table->boolean('state')->default(1);
 
             $table->text('shortdescription')->nullable();

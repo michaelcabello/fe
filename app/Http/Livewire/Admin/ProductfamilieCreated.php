@@ -55,7 +55,7 @@ class ProductfamilieCreated extends Component
 
 
        // $this->brands = Brand::all();
-       // $this->brands= Brand::pluck('name','id');
+        $this->brands= Brand::pluck('name','id');
        /// $this->modelos = Modelo::all();
        $this->modelos = Modelo::pluck('name','id');
 
@@ -93,9 +93,13 @@ class ProductfamilieCreated extends Component
     public function updatedCategoryId($value){
         $this->subcategories = Subcategory::where('category_id', $value)->get();
 
-         $this->brands = Brand::whereHas('categories', function(Builder $query) use ($value){
+         /* $this->brands = Brand::whereHas('categories', function(Builder $query) use ($value){
             $query->where('category_id', $value);
-        })->get();
+        })->get();  */
+
+        /* $this->brands = Brand::whereHas('categories', function ($query) use ($value) {
+            $query->where('category_id', $value);
+        })->get(); */
 
         $this->reset(['subcategory_id']);
     }

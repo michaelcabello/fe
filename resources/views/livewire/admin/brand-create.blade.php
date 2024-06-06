@@ -36,8 +36,7 @@
                         {{-- wire:model.defer="content" --}}
                         wire:model="description"
                         class="w-full form-control"
-                        rows="5">
-                        </textarea>
+                        rows="5"></textarea>
 
 
                     <x-jet-input-error for="description"/>

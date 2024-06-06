@@ -8,8 +8,10 @@ use Livewire\WithPagination;
 
 class CategoryListd extends Component
 {
-    
+
     use WithPagination;
+    public $selectedParentCategory = [];
+
 
     public function render()
     {
@@ -19,8 +21,16 @@ class CategoryListd extends Component
         //->get();
         //  return view('categorias', compact('categories'));
 
-       // dd($categories);
+       // dd($categories);[
 
-        return view('livewire.admin.category-listd', compact('categories'));
+
+
+        return view('livewire.admin.category-listd', [
+                'categories' => $categories,
+                'selectedParentCategory' => $this->selectedParentCategory,
+        ]);
+
+
+
     }
 }
